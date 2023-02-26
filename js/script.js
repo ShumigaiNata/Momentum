@@ -155,7 +155,7 @@ const btnChangeQuote = document.querySelector('.change-quote');
 
 async function getQuotes() {
     try {
-        const response = await fetch('../data.json')
+        const response = await fetch('data.json')
          .then (response => response.json())
         let randomQuote = Math.floor(Math.random() * (response.length));
         quote.textContent = response[randomQuote].text;
